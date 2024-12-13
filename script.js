@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (scrollPosition >= carModelsContainer.scrollWidth / 2) {
         scrollPosition = 0;
       }
+
       requestAnimationFrame(autoScroll);
     }
   }
