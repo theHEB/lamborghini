@@ -29,13 +29,19 @@
   <body>
     <div class="container">
       <div class="header">
+        <button class="menu-button" onclick="toggleMenu()">&#9776;</button>
         <img
           src="lamborghini.png"
           alt="Lamborghini Logo"
           onclick="scrollToTop()"
         />
-        <nav>
-          <a href="#contact" onclick="scrollToContact()">CONTACT</a>
+        <nav class="menu" id="menu">
+          <button class="menu-button" onclick="toggleMenu()">&#9776;</button>
+          <a href="#history">History</a>
+          <a href="#about">About Us</a>
+          <a href="#models">Models</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#contact">Contact</a>
         </nav>
       </div>
       <div class="middle">
@@ -255,6 +261,10 @@
     </div>
     <script>
       AOS.init();
+      function toggleMenu() {
+        const menu = document.getElementById("menu");
+        menu.classList.toggle("active");
+      }
     </script>
   </body>
 </html>
