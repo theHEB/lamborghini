@@ -68,7 +68,9 @@ html {
   overflow-x: auto;
   scrollbar-width: thin;
   scrollbar-color: #b8860b #1c1c1c;
-  cursor: pointer;
+  cursor: grab;
+  -ms-overflow-style: none;  /* Internet Explorer için */
+  scrollbar-width: none; /* Firefox için scrollbar'ı gizle */
 }
 
 .car-models::-webkit-scrollbar {
@@ -150,6 +152,7 @@ html {
   background-color: #ff4500;
   color: #fff;
 }
+
 .footer {
   background-color: #333;
   color: #fff;
