@@ -46,4 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     card.style.cursor = "pointer";
   });
+  if (window.innerWidth < 768) {
+    isAutoScrolling = false;
+  }
 });
