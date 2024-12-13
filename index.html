@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="logo_header_01.svg" type="image/svg" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <title>Lamborghini</title>
     <script>
       src = "https://kit.fontawesome.com/2823cdcd53.js";
@@ -16,11 +21,6 @@
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css" />
     <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
       rel="stylesheet"
     />
@@ -29,19 +29,16 @@
   <body>
     <div class="container">
       <div class="header">
-        <button class="menu-button" onclick="toggleMenu()">&#9776;</button>
         <img
           src="lamborghini.png"
           alt="Lamborghini Logo"
           onclick="scrollToTop()"
         />
-        <nav class="menu" id="menu">
-          <button class="menu-button" onclick="toggleMenu()">&#9776;</button>
-          <a href="#history">History</a>
-          <a href="#about">About Us</a>
-          <a href="#models">Models</a>
-          <a href="#gallery">Gallery</a>
-          <a href="#contact">Contact</a>
+        <nav>
+          <a href="https://www.linkedin.com/in/hebykbga/" target="_blank"
+            >HEBYKBGA</a
+          >
+          <a href="#contact" onclick="scrollToContact()">CONTACT</a>
         </nav>
       </div>
       <div class="middle">
@@ -55,7 +52,11 @@
         data-aos-duration="1500"
         data-aos-delay="300"
       >
-        <div class="car" id="temerario">
+        <div
+          class="car"
+          id="temerario"
+          data-url="https://www.lamborghini.com/en-en/models/temerario"
+        >
           <img src="temerario.webp" alt="TEMERARIO" />
           <div class="car-details">
             <h2>TEMERARIO</h2>
@@ -77,7 +78,11 @@
           </div>
         </div>
 
-        <div class="car" id="revuelto">
+        <div
+          class="car"
+          id="revuelto"
+          data-url="https://www.lamborghini.com/en-en/models/temerario"
+        >
           <img src="revuelto.webp" alt="REVUELTO" />
           <div class="car-details">
             <h2>REVUELTO</h2>
@@ -98,7 +103,11 @@
             >
           </div>
         </div>
-        <div class="car" id="veneno">
+        <div
+          class="car"
+          id="veneno"
+          data-url="https://www.lamborghini.com/en-en/models/temerario"
+        >
           <img src="veneno.webp" alt="Veneno" />
           <div class="car-details">
             <h2>Veneno</h2>
@@ -119,7 +128,11 @@
             >
           </div>
         </div>
-        <div class="car" id="huracan">
+        <div
+          class="car"
+          id="huracan"
+          data-url="https://www.lamborghini.com/en-en/models/temerario"
+        >
           <img src="huracan.webp" alt="Huracán" />
           <div class="car-details">
             <h2>Huracán</h2>
@@ -140,7 +153,11 @@
             >
           </div>
         </div>
-        <div class="car" id="essenza">
+        <div
+          class="car"
+          id="essenza"
+          data-url="https://www.lamborghini.com/en-en/models/temerario"
+        >
           <img src="Essenza SCV12.jpg" alt="Essenza SCV12" />
           <div class="car-details">
             <h2>Essenza SCV12</h2>
@@ -161,7 +178,11 @@
             >
           </div>
         </div>
-        <div class="car" id="centenario">
+        <div
+          class="car"
+          id="centenario"
+          data-url="https://www.lamborghini.com/en-en/models/temerario"
+        >
           <img src="Centenario.avif" alt="Centenario" />
           <div class="car-details">
             <h2>Centenario</h2>
@@ -182,7 +203,11 @@
             >
           </div>
         </div>
-        <div class="car" id="urus">
+        <div
+          class="car"
+          id="urus"
+          data-url="https://www.lamborghini.com/en-en/models/temerario"
+        >
           <img src="urus.jpg" alt="URUS" />
           <div class="car-details">
             <h2>URUS</h2>
@@ -252,7 +277,12 @@
                 href="https://www.linkedin.com/in/hebykbga/"
                 target="_blank"
                 class="social-icon"
-                ><i class="fab fa-linkedin"></i
+                ><i class="fab fa-linkedin"></i></a
+              ><a
+                href="https://github.com/theHEB"
+                target="_blank"
+                class="social-icon"
+                ><i class="fab fa-github"></i
               ></a>
             </div>
           </div>
@@ -261,10 +291,6 @@
     </div>
     <script>
       AOS.init();
-      function toggleMenu() {
-        const menu = document.getElementById("menu");
-        menu.classList.toggle("active");
-      }
     </script>
   </body>
 </html>
