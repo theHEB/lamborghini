@@ -4,11 +4,15 @@ document.addEventListener("DOMContentLoaded", function () {
   let scrollPosition = 0;
   let isAutoScrolling = true;
   let timeoutId;
+
+  // Kopyalanan araba kartları için sonsuz döngü
   const cars = Array.from(carModelsContainer.children);
   cars.forEach((car) => {
     const clone = car.cloneNode(true);
     carModelsContainer.appendChild(clone);
   });
+
+  // Otomatik kaydırma fonksiyonu
   function autoScroll() {
     if (isAutoScrolling) {
       scrollPosition += 1;
@@ -20,6 +24,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
   autoScroll();
+
+  // Fare kaydırma ile manuel kaydırma
   carModelsContainer.addEventListener("wheel", function (e) {
     if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
       return;
@@ -34,6 +40,8 @@ document.addEventListener("DOMContentLoaded", function () {
       autoScroll();
     }, 2000);
   });
+
+  // Araba kartına tıklama işlemi
   carCards.forEach((card) => {
     const redirectUrl = card.getAttribute("data-url");
 
