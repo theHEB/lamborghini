@@ -65,14 +65,23 @@ html {
   gap: 30px;
   padding: 50px;
   margin: 0;
-  overflow-x: hidden; /* Scrollbar'ı gizle */
-  cursor: grab; /* Mobilde daha rahat kaydırma */
-  -ms-overflow-style: none;  /* Internet Explorer için */
-  scrollbar-width: none; /* Firefox için scrollbar'ı gizle */
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #b8860b #1c1c1c;
+  cursor: pointer;
 }
 
 .car-models::-webkit-scrollbar {
-  display: none; /* Webkit tarayıcılar için scrollbar'ı gizle */
+  height: 8px;
+}
+
+.car-models::-webkit-scrollbar-thumb {
+  background-color: #b8860b;
+  border-radius: 10px;
+}
+
+.car-models::-webkit-scrollbar-track {
+  background: #1c1c1c;
 }
 
 .car {
@@ -141,8 +150,6 @@ html {
   background-color: #ff4500;
   color: #fff;
 }
-
-/* Footer */
 .footer {
   background-color: #333;
   color: #fff;
@@ -226,7 +233,6 @@ html {
 }
 
 @media (max-width: 768px) {
-  /* Mobile view adjustments */
   .header {
     flex-direction: row;
     align-items: center;
@@ -240,11 +246,11 @@ html {
   }
 
   .header img {
-    order: 1; /* Ensures logo stays on the left */
+    order: 1;
   }
 
   .header nav {
-    order: 2; /* Ensures contact is aligned to the right */
+    order: 2;
   }
 
   .car {
