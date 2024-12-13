@@ -55,7 +55,7 @@ html {
 
 .middle {
   width: 100%;
-  height: 100%;
+  height: 750px;
   overflow: hidden;
 }
 
@@ -68,7 +68,10 @@ html {
   overflow-x: auto;
   scrollbar-width: thin;
   scrollbar-color: #b8860b #1c1c1c;
-  cursor: pointer;
+  cursor: grab;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  touch-action: pan-x;
 }
 
 .car-models::-webkit-scrollbar {
@@ -133,23 +136,6 @@ html {
   color: #ff4500;
 }
 
-.car-details a {
-  display: block;
-  text-align: center;
-  color: #ff4500;
-  font-size: 18px;
-  text-decoration: none;
-  background-color: #2e2e2e;
-  padding: 10px 20px;
-  border-radius: 30px;
-  transition: background-color 0.3s ease;
-  margin-top: 10px;
-}
-
-.car-details a:hover {
-  background-color: #ff4500;
-  color: #fff;
-}
 .footer {
   background-color: #333;
   color: #fff;
@@ -239,7 +225,10 @@ html {
     padding: 10px;
     justify-content: space-between;
   }
-
+  .car-models {
+    padding: 10px;
+    gap: 20px;
+  }
   .header nav {
     flex-direction: row;
     gap: 10px;
